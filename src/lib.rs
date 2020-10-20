@@ -1,6 +1,5 @@
 use std::fs;
 use std::error::Error;
-use std::assert_eq;
 pub struct Config{
     pub file_name: String,
     pub query: String,
