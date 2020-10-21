@@ -57,21 +57,21 @@ mod tests{
 
     #[test]
     fn one_result(){
-        let query  = "uct";
+        let query  = "duct";
         let contents = "\
-        product,fast,reliable
-        friend
-        ";
-        assert_eq!(search_case_insensitive(query,contents),vec!["product,fast,reliable"]);
+Rust:
+safe, fast, productive.
+Pick three.";
+        assert_eq!(search(query,contents),vec!["safe, fast, productive."]);
     }
     #[test]
     fn  case_insensitive(){
-        let query = "duct";
+        let query = "rUsT";
         let contents = "\
 Rust:
 safe, fast, productive.
 Pick three.
-Duct tape.";
-        assert_eq!(vec!["Rust:","Truest me."],search(query,contents));
+Trust me.";
+        assert_eq!(vec!["Rust:","Trust me."],search_case_insensitive(query,contents));
     }
 }
