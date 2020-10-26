@@ -23,7 +23,7 @@ mod tests{
             thread::sleep(Duration::from_secs(1));
             println!("{}",info.to_uppercase());
         }).join();
-        println!("the origin can't use");
+        println!("the info can't use here");
     }
 }
 
